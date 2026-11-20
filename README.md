@@ -2,8 +2,10 @@
 
 A beginner-friendly terminal project using only NumPy and Pandas for Uttar Pradesh crop yield and production estimation.
 
-## Dataset files
+## Project files
 
+- `main.py` — terminal interface and yield/production calculation
+- `data_cleaning.py` — CSV loading, cleaning, validation and IQR outlier removal
 - `dataset/messy_up_crop.csv` — original data
 - `dataset/clean_up_crop.csv` — cleaned data created when the program runs
 
@@ -32,7 +34,7 @@ python main.py
 
 Enter the district, crop, season, year and cultivated area when prompted.
 
-The project uses Pandas for loading, cleaning and filtering the CSV. NumPy validates area and yield values.
+`data_cleaning.py` uses Pandas and NumPy to load, clean and filter the CSV. `main.py` handles the terminal interface and historical-average estimation.
 
 Outliers are removed using the IQR rule for area, production and yield:
 
