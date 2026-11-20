@@ -1,0 +1,48 @@
+# CropVison
+
+A beginner-friendly terminal project using only NumPy and Pandas for Uttar Pradesh crop yield and production estimation.
+
+## Dataset files
+
+- `dataset/messy_up_crop.csv` — original data
+- `dataset/clean_up_crop.csv` — cleaned data created when the program runs
+
+## Setup
+
+Activate the existing virtual environment and install dependencies:
+
+```bash
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+For a new environment:
+
+```bash
+uv venv --python 3.12 --seed .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+## Run
+
+```bash
+python main.py
+```
+
+Enter the district, crop, season, year and cultivated area when prompted.
+
+The project uses Pandas for loading, cleaning and filtering the CSV. NumPy validates area and yield values.
+
+Outliers are removed using the IQR rule for area, production and yield:
+
+- Lower limit = Q1 − 1.5 × IQR
+- Upper limit = Q3 + 1.5 × IQR
+
+Values outside these limits are not written to the cleaned CSV.
+
+Yield is estimated from the historical average for the matching district, crop and season. Production is calculated as:
+
+`production = estimated yield × area in hectares`
+
+No machine-learning library or model training is used.
