@@ -11,19 +11,10 @@ A beginner-friendly terminal project using only NumPy and Pandas for Uttar Prade
 
 ## Setup
 
-Activate the existing virtual environment and install dependencies:
+Install dependencies:
 
 ```bash
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-```
-
-For a new environment:
-
-```bash
-uv venv --python 3.12 --seed .venv
-source .venv/bin/activate
-python -m pip install -r numpy pandas
+python -m pip install numpy pandas
 ```
 
 ## Run
