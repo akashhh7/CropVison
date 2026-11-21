@@ -23,7 +23,7 @@ For a new environment:
 ```bash
 uv venv --python 3.12 --seed .venv
 source .venv/bin/activate
-python -m pip install -r requirements.txt
+python -m pip install -r numpy pandas
 ```
 
 ## Run
@@ -47,4 +47,3 @@ Yield is estimated from the historical average for the matching district, crop a
 
 `production = estimated yield × area in hectares`
 
-No machine-learning library or model training is used.
