@@ -1,6 +1,6 @@
 # CropVison
 
-A beginner-friendly terminal project using only NumPy and Pandas for Uttar Pradesh crop yield and production estimation.
+A python project using NumPy and Pandas for Uttar Pradesh crop yield and production estimation.
 
 ## Project files
 
@@ -18,9 +18,13 @@ python -m pip install numpy pandas
 ```
 
 ## Run
+```bash
+1. python data_cleaning.py
+```
+Cleans the messy csv file data and creates a new cleaned csv file. 
 
 ```bash
-python main.py
+2. python main.py
 ```
 
 Enter the district, crop, season, year and cultivated area when prompted.
